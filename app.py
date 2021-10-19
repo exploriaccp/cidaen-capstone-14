@@ -96,7 +96,7 @@ app.layout = html.Div([
         dcc.Graph(
             id='country-pie'
         )
-    ], style={"columnCount": 2})
+    ], style={"columnCount": 3})
 ])
 
 
