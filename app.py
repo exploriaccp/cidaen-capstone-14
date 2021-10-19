@@ -245,7 +245,7 @@ def update_figures(start_date_selected, end_date_selected, social_networks_selec
     country_pie_fig = px.pie(
         df_country,
         values='name',
-        names='device',
+        names='country',
         labels={
             'name': 'Total'
         }
