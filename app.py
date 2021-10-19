@@ -91,12 +91,7 @@ app.layout = html.Div([
         dcc.Graph(
             id='devices-pie'
         )
-        ,
-        html.H3('Total Visits Pie by Country', style={"textAlign": "center"}),
-        dcc.Graph(
-            id='country-pie'
-        )
-    ], style={"columnCount": 3})
+    ], style={"columnCount": 2})
 ])
 
 
