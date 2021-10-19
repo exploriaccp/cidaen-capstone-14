@@ -91,7 +91,7 @@ app.layout = html.Div([
         dcc.Graph(
             id='devices-pie'
         ),
-        html.H3('Total Visits Pie by Country', style={"textAlign": "center"}),
+        html.H3('Resume Pie by Country', style={"textAlign": "center"}),
         dcc.Graph(
             id='country-pie'
         )
@@ -243,11 +243,11 @@ def update_figures(start_date_selected, end_date_selected, social_networks_selec
         }
     )
     country_pie_fig = px.pie(
-        df_devices,
+        df_country,
         values='name',
         names='device',
         labels={
-            'name': 'Total Country'
+            'name': 'Total'
         }
     )
     return total_visit, facebook_visit, instagram_visit, twitter_visit, total_visit_fig, total_visit_social_network_fig, world_map_fig, devices_pie_fig, country_pie_fig
