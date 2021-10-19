@@ -104,7 +104,6 @@ app.layout = html.Div([
     Output('total-visit-social-networks-line', 'figure'),
     Output('world-map', 'figure'),
     Output('diveces-pie', 'figure'),
-    Output('country-pie', 'figure'),
     Input('date-picker-range', 'start_date'),
     Input('date-picker-range', 'end_date'),
     Input('social-networks-dropdown', 'value'),
@@ -238,15 +237,15 @@ def update_figures(start_date_selected, end_date_selected, social_networks_selec
             'name': 'Total Visits'
         }
     )
-    country_pie_fig = px.pie(
-        df_devices,
-        values='name',
-        names='device',
-        labels={
-            'name': 'Total Country'
-        }
-    )
-    return total_visit, facebook_visit, instagram_visit, twitter_visit, total_visit_fig, total_visit_social_network_fig, world_map_fig, devices_pie_fig, country_pie_fig
+    # country_pie_fig = px.pie(
+    #     df_devices,
+    #     values='name',
+    #     names='device',
+    #     labels={
+    #         'name': 'Total Country'
+    #     }
+    # )
+    return total_visit, facebook_visit, instagram_visit, twitter_visit, total_visit_fig, total_visit_social_network_fig, world_map_fig, devices_pie_fig
 
 
 if __name__ == '__main__':
